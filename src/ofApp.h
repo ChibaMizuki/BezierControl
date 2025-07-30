@@ -14,7 +14,10 @@ class ofApp : public ofBaseApp{
 		int				width, height, widthOffset, heightOffset; // 画面サイズ
 		int				endX; // 終点のx座標
 		ofVec2f			offset; // 画面サイズのオフセット
-		ofEasyCam		camera; 
+		
+		bool							MODE2 = false; // 制御点の扱いを変更する変数
+		vector<pair<ofVec2f, ofVec2f>>	MODE2Point;
+		int								MODE2Num;
 
 	public:
 		void setup();
@@ -36,5 +39,6 @@ class ofApp : public ofBaseApp{
 		float Bernstein(int, int, float);
 		int binomialcoefficient(int, int);
 		ofVec2f Bezier(float);
+		ofVec2f Bezier_MODE2(float);
 		
 };
