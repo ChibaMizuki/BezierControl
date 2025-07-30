@@ -141,7 +141,7 @@ void ofApp::mousePressed(int x, int y, int button){
 	}
 	else if (button == OF_MOUSE_BUTTON_MIDDLE) {
 		if (ControlPoint.size() > 2) {
-			ControlPoint.erase(ControlPoint.end() - 1);
+			ControlPoint.erase(ControlPoint.end() - 2);
 			ControlNum = ControlPoint.size();
 		}
 	}
